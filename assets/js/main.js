@@ -854,7 +854,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const onConfirm = n === LAST_STEP;
             $('#modal-aside').style.display = onConfirm ? 'none' : '';
             $('.modal-body').style.gridTemplateColumns = onConfirm ? '1fr' : '';
+            // Reset both: the main pane owns the scroll on the two-column layout,
+            // the body owns it once the aside stacks underneath (<=1100px).
             $('#modal-main').scrollTop = 0;
+            $('.modal-body').scrollTop = 0;
             renderSummary();
         }
 

@@ -337,7 +337,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .logo {
     display: inline-flex; align-items: center; gap: .6rem;
     font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;
-    color: var(--clr-text); letter-spacing: -.03em;
+    color: var(--clr-text); letter-spacing: -.03em; white-space: nowrap;
 }
 .logo-mark {
     width: 42px; height: 42px; border-radius: 14px;
@@ -357,6 +357,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .nav-link {
     font-weight: 500; font-size: .95rem; color: var(--clr-text-muted);
     padding: .5rem .85rem; border-radius: var(--radius-pill); position: relative;
+    white-space: nowrap;
 }
 .nav-link:hover { color: var(--clr-text); background: var(--clr-bg-light); }
 .nav-link.active { color: var(--clr-primary); background: var(--clr-secondary); }
@@ -372,6 +373,17 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 }
 .icon-btn:hover { background: var(--clr-secondary); color: var(--clr-primary); border-color: var(--clr-border-strong); transform: translateY(-2px); }
 .hamburger { display: none; }
+
+/* Until it picks up .scrolled the navbar is transparent over the dark hero photo,
+   so its contents need light-on-dark colours in *both* themes — the token colours
+   are tuned for the page surface and vanish against the image. */
+.navbar:not(.scrolled) .logo { color: #fff; }
+.navbar:not(.scrolled) .logo span b { color: var(--clr-aqua); }
+.navbar:not(.scrolled) .nav-link { color: rgba(255, 255, 255, .78); }
+.navbar:not(.scrolled) .nav-link:hover { color: #fff; background: rgba(255, 255, 255, .14); }
+.navbar:not(.scrolled) .nav-link.active { color: #fff; background: rgba(255, 255, 255, .2); }
+.navbar:not(.scrolled) .icon-btn { color: #fff; border-color: rgba(255, 255, 255, .35); }
+.navbar:not(.scrolled) .icon-btn:hover { color: #fff; background: rgba(255, 255, 255, .2); border-color: rgba(255, 255, 255, .55); }
 
 /* Drawer */
 .drawer-overlay {
@@ -435,7 +447,8 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
     font-size: var(--fs-sm); font-weight: 500; margin-bottom: var(--space-3);
 }
 .hero-badge .stars-mini { color: var(--clr-gold); display: inline-flex; gap: 1px; font-size: .9rem; }
-.hero-badge .dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255, 255, 255, .4); }
+.hero-badge .dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255, 255, 255, .4); flex: none; }
+.hero-badge > span { white-space: nowrap; }
 
 .hero-title { color: #fff; font-size: var(--fs-display); font-weight: 600; margin-bottom: var(--space-3); letter-spacing: -.035em; }
 .hero-title em {
@@ -565,7 +578,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
    6. WASH BAY — interactive scrub-to-clean
    -------------------------------------------------------------------------- */
 .washbay-section { background: var(--clr-bg-light); overflow: hidden; }
-.washbay-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 4vw, 4rem); align-items: center; }
+.washbay-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 4vw, 4rem); align-items: center; }
 
 .washbay-copy .eyebrow { background: var(--clr-surface); }
 
@@ -622,6 +635,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
     /* pan-y keeps vertical page scrolling working when the bay fills a phone screen —
        horizontal drags still reach the canvas as pointer events. */
     touch-action: pan-y;
+    width: 100%; max-width: 100%;
 }
 .bay.finished { cursor: default; }
 .bay-reset, .bay-done .btn { cursor: pointer; }
@@ -734,7 +748,10 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 /* Packages */
 .pricing-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
 .pricing-media { position: relative; aspect-ratio: 16 / 9; }
-.pricing-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(3, 14, 22, .85), transparent 60%); }
+/* z-index must be restated: this shares the ::after box with .media::after, which
+   parks the fallback pattern at -1 — behind the photo, where a scrim does nothing.
+   1 puts it over the image and still under .price-tag (2). */
+.pricing-media::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(3, 14, 22, .85), transparent 60%); }
 .pricing-media .price-tag {
     position: absolute; z-index: 2; bottom: 1rem; left: 1rem; color: #fff;
     font-family: var(--font-heading); display: flex; align-items: flex-start; gap: .15rem;
@@ -1076,7 +1093,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
     background: var(--clr-surface);
 }
 .modal-foot .spacer { flex: 1; }
-.demo-flag { font-size: var(--fs-xs); color: var(--clr-text-muted); display: flex; align-items: center; gap: .4rem; }
+.demo-flag { font-size: var(--fs-xs); color: var(--clr-text-muted); display: flex; align-items: center; gap: .4rem; white-space: nowrap; }
 
 /* Confirmation */
 .confirm { text-align: center; padding: var(--space-4) var(--space-2); }
@@ -1146,20 +1163,49 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 /* --------------------------------------------------------------------------
    8. RESPONSIVE
    -------------------------------------------------------------------------- */
+/* The full desktop row — logo + 7 links + 2 toggles + CTA — needs ~1222px, i.e.
+   the container at its 1240px max-width. Any narrower and the CTA slides past the
+   container edge (clipped by html's overflow-x), so hand over to the drawer. */
+@media (max-width: 1239px) {
+    .nav-links, .d-none-mobile, #theme-toggle-desktop, #rtl-toggle-desktop { display: none; }
+    .hamburger { display: grid; }
+}
+
+/* Wherever the cue is still shown it occupies the bottom ~100px of the hero, so
+   the section needs enough bottom padding to keep the widget clear of it. */
+@media (min-width: 1101px) {
+    .hero { padding-bottom: 10rem; }
+}
+
 @media (max-width: 1100px) {
     .hero-container { grid-template-columns: 1fr; }
     .hero-visual { display: none; }
-    .modal-body { grid-template-columns: 1fr; }
+    /* Once the hero stacks, the widget runs to the bottom of the section and the
+       cue lands on top of it — and it points at content already below the fold. */
+    .scroll-cue { display: none; }
+
+    /* Stacked, the two panes would split the body's fixed height into a pair of
+       ~240px keyholes, each scrolling independently. Hand scrolling to the body
+       and let the rows size to their content instead. */
+    .modal-body { grid-template-columns: 1fr; grid-template-rows: auto auto; overflow-y: auto; }
+    .modal-main, .modal-aside { overflow: visible; }
     .modal-aside { border-left: none; border-top: 1px solid var(--clr-border); }
-    .washbay-grid { grid-template-columns: 1fr; }
+    .washbay-grid { grid-template-columns: minmax(0, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 1024px) {
-    .nav-links, .d-none-mobile, #theme-toggle-desktop, #rtl-toggle-desktop { display: none; }
-    .hamburger { display: grid; }
     .contact-grid, .split { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Full-width collage: the negative offsets would hang the badge into the
+       container gutter, a couple of px off the viewport edge. */
+    .badge-float { left: 12px; bottom: -18px; }
+}
+
+/* Below ~560px both phrases no longer fit on one line and the pill breaks onto
+   two ragged lines; drop the secondary claim and keep the rating. */
+@media (max-width: 560px) {
+    .hero-badge .dot, .hero-badge .hero-badge-alt { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -1175,6 +1221,20 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
     .bay { aspect-ratio: 4 / 3; }
     .float-card { display: none; }
     .footer-bottom { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .bay-foot {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .5rem;
+    }
+    .bay-readout {
+        text-align: center;
+    }
+    .bay-reset {
+        width: 100%;
+    }
 }
 
 @media (max-width: 420px) {
