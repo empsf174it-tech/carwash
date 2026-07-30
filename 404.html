@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | MR.WASH IT</title>
+    <meta name="description" content="This page took a wrong turn. Head back to MR.WASH IT and book your premium car wash.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .error-page {
+            position: relative;
+            min-height: 100svh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: var(--space-4);
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .error-bg { position: absolute; inset: 0; z-index: -2; background: #04121A; }
+        .error-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+        .error-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background:
+                radial-gradient(900px 500px at 50% 40%, rgba(0, 180, 216, .28), transparent 65%),
+                linear-gradient(rgba(2, 12, 20, .88), rgba(2, 12, 20, .95));
+        }
+        .error-inner { max-width: 620px; color: #fff; }
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(6rem, 22vw, 12rem);
+            font-weight: 700;
+            line-height: .9;
+            letter-spacing: -.06em;
+            background: linear-gradient(100deg, #90E0EF, #48CAE4 45%, #0077B6);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-2);
+        }
+        .error-inner h1 { color: #fff; font-size: var(--fs-h2); margin-bottom: var(--space-2); }
+        .error-inner p { color: rgba(255, 255, 255, .78); font-size: var(--fs-lead); margin-bottom: var(--space-4); }
+        .error-actions { display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap; }
+        .error-links { margin-top: var(--space-6); display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
+        .error-links a { color: rgba(255, 255, 255, .7); font-size: var(--fs-sm); }
+        .error-links a:hover { color: var(--clr-aqua); }
+        .drip {
+            position: absolute; top: -60px; width: 3px; border-radius: 999px;
+            background: linear-gradient(rgba(144, 224, 239, 0), rgba(144, 224, 239, .8));
+            animation: drip 3.4s linear infinite;
+        }
+        @keyframes drip { to { transform: translateY(115vh); } }
+        @media (prefers-reduced-motion: reduce) { .drip { display: none; } }
+    </style>
+</head>
+<body>
+
+    <main class="error-page">
+        <div class="error-bg">
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1600&q=80" alt="" onerror="this.remove()">
+        </div>
+
+        <span class="drip" style="left:12%;height:80px;animation-delay:0s"></span>
+        <span class="drip" style="left:34%;height:120px;animation-delay:-1.2s"></span>
+        <span class="drip" style="left:61%;height:90px;animation-delay:-2.4s"></span>
+        <span class="drip" style="left:83%;height:140px;animation-delay:-0.7s"></span>
+
+        <div class="error-inner">
+            <div class="error-code">404</div>
+            <h1>This page went down the drain.</h1>
+            <p>The link you followed is either washed away, renamed, or was never here. Your car, however, is still dirty.</p>
+
+            <div class="error-actions">
+                <a href="index.html" class="btn btn-primary btn-large"><i class="ph ph-house"></i> Back to homepage</a>
+                <a href="index.html#packages" class="btn btn-glass btn-large"><i class="ph ph-tag"></i> See packages</a>
+            </div>
+
+            <div class="error-links">
+                <a href="index.html#washbay">Try the wash bay</a>
+                <a href="index.html#membership">Membership</a>
+                <a href="index.html#contact">Contact us</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

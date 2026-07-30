@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR.WASH IT | Premium Car Wash &amp; Detailing</title>
+    <meta name="description" content="MR.WASH IT delivers premium hand washes, ceramic protection and full interior detailing. Try our interactive wash bay and book your slot in 60 seconds.">
+    <meta name="theme-color" content="#0077B6">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-css" disabled>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutomotiveBusiness",
+      "name": "MR.WASH IT",
+      "image": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1920&q=80",
+      "url": "https://mrwashit.com",
+      "telephone": "+1234567890",
+      "priceRange": "$$",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "2140" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Wash Street",
+        "addressLocality": "Clean City",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ============================= HEADER ============================= -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-mark"><i class="ph-fill ph-drop"></i></span>
+                <span>MR.<b>WASH IT</b></span>
+            </a>
+
+            <nav class="nav-links" id="nav-links" aria-label="Primary">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#washbay" class="nav-link">Wash Bay</a>
+                <a href="#packages" class="nav-link">Packages</a>
+                <a href="#membership" class="nav-link">Membership</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle-desktop" aria-label="Toggle dark mode">
+                    <i class="ph ph-moon"></i>
+                </button>
+                <button class="icon-btn" id="rtl-toggle-desktop" aria-label="Toggle right-to-left layout">
+                    <i class="ph ph-arrows-left-right"></i>
+                </button>
+                <button class="btn btn-primary d-none-mobile" data-open-booking>
+                    <i class="ph ph-calendar-check"></i> Book a Wash
+                </button>
+                <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="drawer" id="drawer" aria-label="Mobile menu">
+        <div class="drawer-header">
+            <span class="logo">
+                <span class="logo-mark"><i class="ph-fill ph-drop"></i></span>
+                <span>MR.<b>WASH IT</b></span>
+            </span>
+            <button class="icon-btn" id="close-drawer" aria-label="Close menu"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="drawer-content">
+            <a href="#home" class="drawer-link">Home <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#about" class="drawer-link">About <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#washbay" class="drawer-link">Wash Bay <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#packages" class="drawer-link">Packages <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#membership" class="drawer-link">Membership <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#testimonials" class="drawer-link">Reviews <i class="ph ph-arrow-up-right"></i></a>
+            <a href="#contact" class="drawer-link">Contact <i class="ph ph-arrow-up-right"></i></a>
+
+            <div class="drawer-actions">
+                <div class="drawer-toggles">
+                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle dark mode"><i class="ph ph-moon"></i></button>
+                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle right-to-left layout"><i class="ph ph-arrows-left-right"></i></button>
+                </div>
+                <button class="btn btn-primary btn-full" data-open-booking><i class="ph ph-calendar-check"></i> Book a Wash</button>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- ============================= HERO ============================= -->
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1920&q=80" alt="" onerror="this.remove()">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-grain"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge" data-reveal>
+                        <span class="stars-mini">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </span>
+                        4.9 from 2,140 drivers <span class="dot"></span> Voted #1 in Clean City
+                    </div>
+
+                    <h1 class="hero-title" data-reveal style="--reveal-delay:80ms">
+                        Your car deserves<br>a <em>showroom finish</em>.
+                    </h1>
+
+                    <p class="hero-lead" data-reveal style="--reveal-delay:160ms">
+                        Hand-washed by detailers, protected with ceramic-grade sealants, and finished in under 45 minutes. Eco-friendly water reclamation on every wash.
+                    </p>
+
+                    <div class="hero-cta" data-reveal style="--reveal-delay:240ms">
+                        <button class="btn btn-primary btn-large" data-open-booking>
+                            <i class="ph ph-sparkle"></i> Book your wash
+                        </button>
+                        <a href="#washbay" class="btn btn-glass btn-large">
+                            <i class="ph ph-hand-swipe-right"></i> Try the wash bay
+                        </a>
+                    </div>
+
+                    <ul class="hero-points" data-reveal style="--reveal-delay:320ms">
+                        <li><i class="ph-fill ph-check-circle"></i> No queue, reserved bays</li>
+                        <li><i class="ph-fill ph-check-circle"></i> Scratch-free foam process</li>
+                        <li><i class="ph-fill ph-check-circle"></i> 100% satisfaction or re-wash</li>
+                    </ul>
+
+                    <div class="hero-widget" data-reveal style="--reveal-delay:400ms">
+                        <div class="hero-widget-title"><i class="ph ph-lightning"></i> Express booking</div>
+                        <form class="quick-book-form" id="quick-book-form">
+                            <div class="input-group">
+                                <i class="ph ph-map-pin"></i>
+                                <select aria-label="Location" id="quick-location">
+                                    <option value="" disabled selected>Select location</option>
+                                    <option value="Downtown Flagship">Downtown Flagship</option>
+                                    <option value="Westside Express">Westside Express</option>
+                                    <option value="Uptown Detail Studio">Uptown Detail Studio</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <i class="ph ph-clock"></i>
+                                <select aria-label="Time" id="quick-time">
+                                    <option value="" disabled selected>Preferred time</option>
+                                    <option value="09:00">Morning · 8AM – 12PM</option>
+                                    <option value="13:30">Afternoon · 12PM – 4PM</option>
+                                    <option value="17:00">Evening · 4PM – 7PM</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Check slots</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-reveal style="--reveal-delay:300ms">
+                    <div class="media">
+                        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=80" alt="Detailer polishing a glossy car body" onerror="this.remove()">
+                    </div>
+                    <div class="float-card fc-1">
+                        <i class="ph-fill ph-timer"></i>
+                        <div>
+                            <strong>42 min</strong>
+                            <small>Average turnaround</small>
+                        </div>
+                    </div>
+                    <div class="float-card fc-2">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <div>
+                            <strong>Ceramic grade</strong>
+                            <small>6-month gloss lock</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+        </section>
+
+        <!-- ============================= MARQUEE ============================= -->
+        <div class="marquee-wrap">
+            <div class="marquee" id="marquee">
+                <span class="marquee-item"><i class="ph-fill ph-drop"></i> pH-neutral foam</span>
+                <span class="marquee-item"><i class="ph-fill ph-leaf"></i> 80% water reclaimed</span>
+                <span class="marquee-item"><i class="ph-fill ph-hand-soap"></i> Two-bucket method</span>
+                <span class="marquee-item"><i class="ph-fill ph-sparkle"></i> Ceramic SiO₂ sealant</span>
+                <span class="marquee-item"><i class="ph-fill ph-wind"></i> Filtered air dry</span>
+                <span class="marquee-item"><i class="ph-fill ph-car-profile"></i> EV &amp; wrap safe</span>
+                <span class="marquee-item"><i class="ph-fill ph-medal"></i> Certified detailers</span>
+            </div>
+        </div>
+
+        <!-- ============================= TRUST BAR ============================= -->
+        <section class="trust-bar">
+            <div class="container trust-container">
+                <div class="trust-item">
+                    <h3 class="trust-number" data-count="12" data-suffix="+">0</h3>
+                    <p class="trust-label">Years in business</p>
+                </div>
+                <div class="trust-item">
+                    <h3 class="trust-number" data-count="86" data-suffix="k+">0</h3>
+                    <p class="trust-label">Cars transformed</p>
+                </div>
+                <div class="trust-item">
+                    <h3 class="trust-number" data-count="4.9" data-decimals="1" data-suffix="/5">0</h3>
+                    <p class="trust-label">Average rating</p>
+                </div>
+                <div class="trust-item">
+                    <h3 class="trust-number" data-count="100" data-suffix="%">0</h3>
+                    <p class="trust-label">Eco-friendly process</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= ABOUT ============================= -->
+        <section id="about" class="section">
+            <div class="aurora"><span></span><span></span></div>
+            <div class="container split">
+                <div class="collage-wrap" data-reveal>
+                    <div class="collage">
+                        <div class="media">
+                            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=700&q=80" alt="Foam covering a car during a hand wash" onerror="this.remove()">
+                        </div>
+                        <div class="media">
+                            <img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=600&q=80" alt="Water beading on a freshly sealed paint surface" onerror="this.remove()">
+                        </div>
+                        <div class="media">
+                            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=600&q=80" alt="Spotless cabin after a full interior clean" onerror="this.remove()">
+                        </div>
+                    </div>
+                    <div class="badge-float">
+                        <span class="ring"><i class="ph-fill ph-seal-check"></i></span>
+                        <div>
+                            <strong style="font-family:var(--font-heading);font-size:1.05rem;">Insured &amp; certified</strong><br>
+                            <small style="color:var(--clr-text-muted);font-size:.8rem;">IDA-trained technicians</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-reveal style="--reveal-delay:120ms">
+                    <span class="eyebrow"><i class="ph-fill ph-sparkle"></i> Why MR.WASH IT</span>
+                    <h2>Not a car wash. A <span class="gradient-text">paint care ritual</span>.</h2>
+                    <p class="section-lead" style="margin-inline:0;text-align:left;">
+                        Every vehicle goes through a fixed 9-stage process — the same one we use on show cars. No spinning brushes, no swirl marks, no shortcuts.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>
+                            <span class="tick"><i class="ph-bold ph-check"></i></span>
+                            <div>
+                                <strong>Touchless pre-soak &amp; snow foam</strong>
+                                <p>Grit is lifted off the clear coat before a single mitt touches your paint.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><i class="ph-bold ph-check"></i></span>
+                            <div>
+                                <strong>Reclaimed, filtered water</strong>
+                                <p>Up to 80% of every litre is recycled on site — spot-free rinse, guilt-free wash.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tick"><i class="ph-bold ph-check"></i></span>
+                            <div>
+                                <strong>Hand-finished, always</strong>
+                                <p>Plush microfibre drying and a hand-applied sealant on every package above Basic.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem;">
+                        <button class="btn btn-primary" data-open-booking><i class="ph ph-calendar-check"></i> Reserve a bay</button>
+                        <a href="#packages" class="btn btn-outline">See packages</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= INTERACTIVE WASH BAY ============================= -->
+        <section id="washbay" class="section washbay-section">
+            <div class="container">
+                <div class="washbay-grid">
+                    <div class="washbay-copy" data-reveal>
+                        <span class="eyebrow"><i class="ph-fill ph-hand-swipe-right"></i> Interactive demo</span>
+                        <h2>Grab a sponge.<br><span class="gradient-text">Clean this one yourself.</span></h2>
+                        <p class="section-lead" style="margin-inline:0;text-align:left;">
+                            Pick a tool and drag across the mud-caked panel to wash it off. Clear <strong>85%</strong> and we'll unlock your demo booking — exactly what our team does, only they use more water.
+                        </p>
+
+                        <div class="tool-picker" role="group" aria-label="Choose a cleaning tool">
+                            <button class="tool-btn active" data-tool="sponge"><i class="ph-fill ph-hand-soap"></i> Foam sponge</button>
+                            <button class="tool-btn" data-tool="jet"><i class="ph-fill ph-drop-half"></i> Pressure jet</button>
+                            <button class="tool-btn" data-tool="mop"><i class="ph-fill ph-broom"></i> Wide mop</button>
+                        </div>
+
+                        <div class="progress-shell">
+                            <div class="progress-top">
+                                <span class="label">Panel cleaned</span>
+                                <span class="value" id="clean-value">0%</span>
+                            </div>
+                            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Cleaning progress">
+                                <div class="progress-fill" id="clean-fill"></div>
+                            </div>
+                            <p class="progress-hint" id="clean-hint"><i class="ph ph-cursor-click"></i> Click and drag across the panel to start scrubbing.</p>
+                        </div>
+
+                        <div class="washbay-unlock" id="washbay-unlock">
+                            <p id="unlock-text"><i class="ph ph-lock-simple"></i> Reward locked — finish the panel to unlock your Premium Shine booking.</p>
+                            <button class="btn btn-primary" id="unlock-btn" data-open-booking data-package="premium" disabled>
+                                <i class="ph ph-gift"></i> Claim my Premium Shine slot
+                            </button>
+                        </div>
+                    </div>
+
+                    <div data-reveal style="--reveal-delay:120ms">
+                        <div class="bay" id="bay">
+                            <div class="bay-photo">
+                                <img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=1200&q=80" alt="Glossy clean car panel revealed underneath the dirt layer" onerror="this.remove()">
+                            </div>
+                            <canvas id="dirt-canvas" aria-label="Interactive dirt layer — drag to clean" role="img"></canvas>
+                            <div class="bay-shine"></div>
+
+                            <div class="bay-cursor" id="bay-cursor">
+                                <span class="ripple"></span>
+                                <span class="glyph"><i class="ph-fill ph-hand-soap"></i></span>
+                            </div>
+
+                            <div class="bay-chrome">
+                                <span class="bay-tag"><span class="pulse"></span> Bay 03 · live demo</span>
+                                <div class="bay-foot">
+                                    <div class="bay-readout">
+                                        Water used <b id="water-used">0.0 L</b>
+                                    </div>
+                                    <button class="btn btn-glass btn-sm bay-reset" id="bay-reset"><i class="ph ph-arrow-counter-clockwise"></i> Muddy it again</button>
+                                </div>
+                            </div>
+
+                            <div class="bay-done">
+                                <div>
+                                    <div class="tick-circle"><i class="ph-bold ph-check"></i></div>
+                                    <h3>Spotless. Nice work.</h3>
+                                    <p>That took you a few seconds. Our detailers do the whole car in 42 minutes.</p>
+                                    <button class="btn btn-primary" data-open-booking data-package="premium"><i class="ph ph-calendar-check"></i> Book the real thing</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= PACKAGES ============================= -->
+        <section id="packages" class="section">
+            <div class="aurora"><span></span><span></span></div>
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-tag"></i> Packages</span>
+                    <h2>Pick your level of shine</h2>
+                    <p class="section-lead">Transparent pricing, no upsells at the bay. Prices shown for sedans — larger vehicles are priced in the booking flow.</p>
+                </div>
+
+                <div class="grid grid-3">
+                    <article class="card pricing-card" data-reveal>
+                        <div class="media pricing-media">
+                            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80" alt="Exterior hand wash in progress" onerror="this.remove()">
+                            <div class="price-tag"><span class="cur">$</span><span class="amt">15</span><span class="per">/ wash</span></div>
+                        </div>
+                        <div class="pricing-body">
+                            <h3>Basic Wash</h3>
+                            <p class="duration"><i class="ph ph-timer"></i> About 25 minutes</p>
+                            <ul class="feature-list">
+                                <li><i class="ph-fill ph-check-circle"></i> Snow foam &amp; exterior hand wash</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Wheel face clean</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Spot-free rinse &amp; air dry</li>
+                                <li class="disabled"><i class="ph ph-x-circle"></i> Interior vacuum</li>
+                                <li class="disabled"><i class="ph ph-x-circle"></i> Paint sealant</li>
+                            </ul>
+                            <button class="btn btn-outline btn-full" data-open-booking data-package="basic">Choose Basic</button>
+                        </div>
+                    </article>
+
+                    <article class="card pricing-card popular" data-reveal style="--reveal-delay:100ms">
+                        <span class="badge-popular">Most popular</span>
+                        <div class="media pricing-media">
+                            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80" alt="Technician polishing paintwork to a mirror finish" onerror="this.remove()">
+                            <div class="price-tag"><span class="cur">$</span><span class="amt">35</span><span class="per">/ wash</span></div>
+                        </div>
+                        <div class="pricing-body">
+                            <h3>Premium Shine</h3>
+                            <p class="duration"><i class="ph ph-timer"></i> About 45 minutes</p>
+                            <ul class="feature-list">
+                                <li><i class="ph-fill ph-check-circle"></i> Everything in Basic</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Wheel deep clean &amp; tyre dressing</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Interior vacuum &amp; wipe down</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Glass polish, inside &amp; out</li>
+                                <li><i class="ph-fill ph-check-circle"></i> 3-month clear coat sealant</li>
+                            </ul>
+                            <button class="btn btn-primary btn-full" data-open-booking data-package="premium">Choose Premium</button>
+                        </div>
+                    </article>
+
+                    <article class="card pricing-card" data-reveal style="--reveal-delay:200ms">
+                        <div class="media pricing-media">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Freshly detailed car under studio lighting" onerror="this.remove()">
+                            <div class="price-tag"><span class="cur">$</span><span class="amt">85</span><span class="per">/ wash</span></div>
+                        </div>
+                        <div class="pricing-body">
+                            <h3>Full Detail</h3>
+                            <p class="duration"><i class="ph ph-timer"></i> About 2.5 hours</p>
+                            <ul class="feature-list">
+                                <li><i class="ph-fill ph-check-circle"></i> Everything in Premium</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Carnauba hand wax</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Leather feed &amp; conditioning</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Carpet shampoo &amp; extraction</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Engine bay degrease</li>
+                            </ul>
+                            <button class="btn btn-outline btn-full" data-open-booking data-package="detail">Choose Detail</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= BEFORE / AFTER ============================= -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-arrows-left-right"></i> Proof</span>
+                    <h2>Drag to reveal the difference</h2>
+                    <p class="section-lead">Left, a car due a wash. Right, the finish after a Premium Shine.</p>
+                </div>
+
+                <div class="ba-wrap" id="ba-wrap" data-reveal>
+                    <div class="ba-img ba-before">
+                        <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?auto=format&fit=crop&w=1400&q=80" alt="Dusty car before the wash" onerror="this.remove()">
+                    </div>
+                    <div class="ba-img ba-after" id="ba-after">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80" alt="Gleaming car after the wash" onerror="this.remove()">
+                    </div>
+                    <span class="ba-label left">Before</span>
+                    <span class="ba-label right">After</span>
+                    <div class="ba-handle" id="ba-handle" role="slider" tabindex="0" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                        <span class="ba-knob"><i class="ph-bold ph-arrows-left-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= MEMBERSHIP ============================= -->
+        <section id="membership" class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-crown-simple"></i> Membership</span>
+                    <h2>Unlimited clean, every month</h2>
+                    <p class="section-lead">Plate-recognition entry, no booking needed, cancel any time.</p>
+                </div>
+
+                <div class="grid grid-2">
+                    <article class="card membership-card featured" data-reveal>
+                        <div class="membership-info">
+                            <span class="chip-mini">Best value</span>
+                            <h3>Premium Unlimited</h3>
+                            <p>Daily Premium Shine washes, priority bay access and 15% off all detailing add-ons.</p>
+                            <div class="price-monthly">$55<span>/month</span></div>
+                        </div>
+                        <div class="membership-action">
+                            <button class="btn btn-primary btn-full" data-open-booking data-package="member_premium">Join now</button>
+                        </div>
+                    </article>
+
+                    <article class="card membership-card" data-reveal style="--reveal-delay:100ms">
+                        <div class="membership-info">
+                            <span class="chip-mini">Commuter</span>
+                            <h3>Basic Unlimited</h3>
+                            <p>Unlimited Basic washes for the daily driver who likes to stay presentable.</p>
+                            <div class="price-monthly">$29<span>/month</span></div>
+                        </div>
+                        <div class="membership-action">
+                            <button class="btn btn-outline btn-full" data-open-booking data-package="member_basic">Join now</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= HOW IT WORKS ============================= -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-path"></i> The process</span>
+                    <h2>Four steps to spotless</h2>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card" data-reveal>
+                        <span class="ghost-num">1</span>
+                        <div class="step-number"><i class="ph-fill ph-calendar-check"></i></div>
+                        <h3>Book online</h3>
+                        <p>Choose your vehicle, package and slot in about 60 seconds.</p>
+                    </div>
+                    <div class="step-card" data-reveal style="--reveal-delay:80ms">
+                        <span class="ghost-num">2</span>
+                        <div class="step-number"><i class="ph-fill ph-car-profile"></i></div>
+                        <h3>Roll in</h3>
+                        <p>Your bay is reserved. No queue, no waiting on the forecourt.</p>
+                    </div>
+                    <div class="step-card" data-reveal style="--reveal-delay:160ms">
+                        <span class="ghost-num">3</span>
+                        <div class="step-number"><i class="ph-fill ph-hand-soap"></i></div>
+                        <h3>We work</h3>
+                        <p>Espresso in the lounge while the 9-stage process runs.</p>
+                    </div>
+                    <div class="step-card" data-reveal style="--reveal-delay:240ms">
+                        <span class="ghost-num">4</span>
+                        <div class="step-number"><i class="ph-fill ph-sparkle"></i></div>
+                        <h3>Drive happy</h3>
+                        <p>Final inspection with you, then out the door gleaming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= GALLERY ============================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-images-square"></i> Gallery</span>
+                    <h2>Straight from the bay</h2>
+                    <p class="section-lead">Tap any shot to view it full size.</p>
+                </div>
+
+                <div class="gallery-grid" id="gallery" data-reveal>
+                    <figure class="gallery-item tall wide">
+                        <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80" alt="Snow foam covering a car" onerror="this.remove()">
+                        <figcaption class="cap">Snow foam pre-soak</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=700&q=80" alt="Machine polishing a panel" onerror="this.remove()">
+                        <figcaption class="cap">Paint correction</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=700&q=80" alt="Water beading on sealed paint" onerror="this.remove()">
+                        <figcaption class="cap">Sealant beading</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=700&q=80" alt="Cleaned dashboard and cabin" onerror="this.remove()">
+                        <figcaption class="cap">Interior reset</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=700&q=80" alt="Rinsing a soapy car" onerror="this.remove()">
+                        <figcaption class="cap">Spot-free rinse</figcaption>
+                    </figure>
+                    <figure class="gallery-item full">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80" alt="Finished car with mirror shine" onerror="this.remove()">
+                        <figcaption class="cap">Handover finish</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= TESTIMONIALS ============================= -->
+        <section id="testimonials" class="section bg-light">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-chat-teardrop-text"></i> Reviews</span>
+                    <h2>2,140 drivers can't be wrong</h2>
+                </div>
+
+                <div class="grid grid-3">
+                    <article class="card testimonial-card" data-reveal>
+                        <span class="quote-mark">&ldquo;</span>
+                        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="testimonial-text">They found swirl marks I'd stopped noticing and they're gone. My black paint hasn't looked this deep since the dealership.</p>
+                        <div class="testimonial-meta">
+                            <img class="avatar" src="https://i.pravatar.cc/120?img=47" alt="" onerror="this.remove()">
+                            <div>
+                                <div class="testimonial-author">Sarah Jenkins</div>
+                                <div class="testimonial-role">Premium Unlimited member</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card testimonial-card" data-reveal style="--reveal-delay:100ms">
+                        <span class="quote-mark">&ldquo;</span>
+                        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="testimonial-text">Booked at 7am, in and out on my commute. The plate recognition thing is genuinely brilliant — I never touch my wallet.</p>
+                        <div class="testimonial-meta">
+                            <img class="avatar" src="https://i.pravatar.cc/120?img=12" alt="" onerror="this.remove()">
+                            <div>
+                                <div class="testimonial-author">Mike Torres</div>
+                                <div class="testimonial-role">Weekly regular</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card testimonial-card" data-reveal style="--reveal-delay:200ms">
+                        <span class="quote-mark">&ldquo;</span>
+                        <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="testimonial-text">Full Detail before selling my SUV. The buyer asked if it was ex-demo. Paid for itself four times over.</p>
+                        <div class="testimonial-meta">
+                            <img class="avatar" src="https://i.pravatar.cc/120?img=33" alt="" onerror="this.remove()">
+                            <div>
+                                <div class="testimonial-author">David Reyes</div>
+                                <div class="testimonial-role">Full Detail customer</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= FAQ ============================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-question"></i> FAQ</span>
+                    <h2>Good questions, answered</h2>
+                </div>
+
+                <div class="faq-container" data-reveal>
+                    <div class="faq-item">
+                        <button class="faq-question">How long does a Premium Shine take? <i class="ph-bold ph-caret-down"></i></button>
+                        <div class="faq-answer"><p>About 45 minutes from key handover to final inspection. Book a slot and your bay is held for you, so that time is the whole visit — not the queue.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are your products safe on wraps, PPF and ceramic coatings? <i class="ph-bold ph-caret-down"></i></button>
+                        <div class="faq-answer"><p>Yes. Everything we use is pH-neutral and silicone-free, and we never use spinning brushes. Tell us about your coating during booking and we'll adjust the sealant step.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How does unlimited membership work? <i class="ph-bold ph-caret-down"></i></button>
+                        <div class="faq-answer"><p>Your plan is tied to one licence plate. Our cameras read it on arrival, the barrier lifts, and you drive straight to an open bay. Cancel or pause online any time.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What if I'm not happy with the result? <i class="ph-bold ph-caret-down"></i></button>
+                        <div class="faq-answer"><p>Point it out at the final inspection and we re-wash the vehicle free of charge, same visit. If you spot something later, bring it back within 48 hours.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you wash electric vehicles and large SUVs? <i class="ph-bold ph-caret-down"></i></button>
+                        <div class="faq-answer"><p>Both, daily. EV charge ports are sealed before the rinse stage. Larger vehicles carry a size surcharge which is calculated live in the booking flow — no surprises at the bay.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= CTA BANNER ============================= -->
+        <section class="cta-banner">
+            <div class="cta-bg">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80" alt="" onerror="this.remove()">
+            </div>
+            <div class="container cta-container" data-reveal>
+                <h2>Your bay is one tap away</h2>
+                <p>Reserve a slot in 60 seconds. Pay at the bay, cancel free up to an hour before.</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" data-open-booking><i class="ph ph-calendar-check"></i> Book your wash</button>
+                    <a href="tel:+15551234567" class="btn btn-glass btn-large"><i class="ph ph-phone"></i> (555) 123-4567</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= CONTACT ============================= -->
+        <section id="contact" class="section">
+            <div class="aurora"><span></span><span></span></div>
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow"><i class="ph-fill ph-map-pin"></i> Visit &amp; contact</span>
+                    <h2>Come see us, or send a note</h2>
+                    <p class="section-lead">Prefer the full booking flow? <button class="btn btn-sm btn-outline" data-open-booking style="vertical-align:middle;">Open the booking wizard</button></p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info" data-reveal>
+                        <h3>Flagship location</h3>
+                        <ul class="info-list mt-4">
+                            <li>
+                                <span class="ico"><i class="ph-fill ph-map-pin"></i></span>
+                                <div><small>Address</small><strong>123 Wash Street, Clean City, ST 12345</strong></div>
+                            </li>
+                            <li>
+                                <span class="ico"><i class="ph-fill ph-phone"></i></span>
+                                <div><small>Phone</small><strong>(555) 123-4567</strong></div>
+                            </li>
+                            <li>
+                                <span class="ico"><i class="ph-fill ph-envelope-simple"></i></span>
+                                <div><small>Email</small><strong>hello@mrwashit.com</strong></div>
+                            </li>
+                        </ul>
+
+                        <div class="hours-card">
+                            <h4 style="font-size:1.05rem;">Opening hours</h4>
+                            <ul id="hours-list">
+                                <li data-day="1"><span>Monday</span><span>8:00 – 19:00</span></li>
+                                <li data-day="2"><span>Tuesday</span><span>8:00 – 19:00</span></li>
+                                <li data-day="3"><span>Wednesday</span><span>8:00 – 19:00</span></li>
+                                <li data-day="4"><span>Thursday</span><span>8:00 – 19:00</span></li>
+                                <li data-day="5"><span>Friday</span><span>8:00 – 19:00</span></li>
+                                <li data-day="6"><span>Saturday</span><span>9:00 – 17:00</span></li>
+                                <li data-day="0"><span>Sunday</span><span>9:00 – 17:00</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="map-placeholder">
+                            <div class="map-pin">
+                                <i class="ph-fill ph-map-pin"></i>
+                                <span>MR.WASH IT · Downtown Flagship</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container card" data-reveal style="--reveal-delay:120ms">
+                        <h3>Request a callback</h3>
+                        <p style="color:var(--clr-text-muted);font-size:var(--fs-sm);margin-bottom:1.5rem;">Fleet enquiry, wedding car or something unusual? Tell us and we'll call you back within the hour.</p>
+
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full name</label>
+                                    <input type="text" id="name" name="name" required placeholder="Jordan Doe" autocomplete="name">
+                                    <span class="error-msg">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone number</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="5551234567" autocomplete="tel">
+                                    <span class="error-msg">Enter a valid 10-digit phone number</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vehicle_type">Vehicle type</label>
+                                    <select id="vehicle_type" name="vehicle_type" required>
+                                        <option value="">Select vehicle type</option>
+                                        <option value="sedan">Sedan / Coupe</option>
+                                        <option value="suv">SUV / Crossover</option>
+                                        <option value="truck">Truck / Van</option>
+                                        <option value="luxury">Luxury / Sports</option>
+                                    </select>
+                                    <span class="error-msg">Please select your vehicle type</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="package">Package of interest</label>
+                                    <select id="package" name="package" required>
+                                        <option value="">Select a package</option>
+                                        <option value="basic">Basic Wash</option>
+                                        <option value="premium">Premium Shine</option>
+                                        <option value="detail">Full Detail</option>
+                                        <option value="member_premium">Premium Unlimited</option>
+                                        <option value="member_basic">Basic Unlimited</option>
+                                    </select>
+                                    <span class="error-msg">Please select a package</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred_time">Preferred date &amp; time</label>
+                                <input type="datetime-local" id="preferred_time" name="preferred_time" required>
+                                <span class="error-msg">Please choose a date and time</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="notes">Anything we should know? <span style="color:var(--clr-text-muted);font-weight:500;">(optional)</span></label>
+                                <textarea id="notes" name="notes" placeholder="Ceramic coated, pet hair in the boot, fleet of 6 vans…"></textarea>
+                            </div>
+
+                            <div class="form-message" id="form-message" role="status"></div>
+
+                            <button type="submit" class="btn btn-primary btn-full btn-large"><i class="ph ph-paper-plane-tilt"></i> Send request</button>
+                            <p class="form-note"><i class="ph ph-lock-simple"></i> Demo form — nothing is sent anywhere.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="logo">
+                    <span class="logo-mark"><i class="ph-fill ph-drop"></i></span>
+                    <span>MR.<b>WASH IT</b></span>
+                </a>
+                <p>Premium hand washing and detailing built around your paint, your time and a lot less water. Clean City since 2014.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="X"><i class="ph-fill ph-x-logo"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#washbay">Wash bay demo</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#">Terms &amp; conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Wash notes</h3>
+                <p>Seasonal detailing tips and member-only offers. One email a month, no filler.</p>
+                <form class="newsletter" id="newsletter-form">
+                    <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+                    <button type="submit" aria-label="Subscribe"><i class="ph-bold ph-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 MR.WASH IT. All rights reserved.</p>
+            <div class="pay" aria-label="Accepted payment methods">
+                <i class="ph ph-credit-card"></i><i class="ph ph-apple-logo"></i><i class="ph ph-google-logo"></i><i class="ph ph-currency-dollar"></i>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="to-top" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></button>
+
+    <!-- ============================= LIGHTBOX ============================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="icon-btn lightbox-close" id="lightbox-close" aria-label="Close image"><i class="ph ph-x"></i></button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- ============================= BOOKING MODAL ============================= -->
+    <div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+        <div class="modal-backdrop" data-close-booking></div>
+
+        <div class="modal-panel">
+            <header class="modal-head">
+                <div>
+                    <span class="sub">MR.WASH IT · Booking</span>
+                    <h3 id="booking-title">Reserve your bay</h3>
+                </div>
+                <div style="display:flex;align-items:center;gap:1rem;">
+                    <div class="stepper" id="stepper" aria-hidden="true"></div>
+                    <button class="icon-btn" data-close-booking aria-label="Close booking"><i class="ph ph-x"></i></button>
+                </div>
+            </header>
+
+            <div class="modal-body">
+                <div class="modal-main" id="modal-main">
+
+                    <!-- STEP 1 — Vehicle -->
+                    <section class="step-pane active" data-step="1">
+                        <h4 class="step-title">What are we washing?</h4>
+                        <p class="step-sub">Size affects the time and product we use, so pricing adjusts here.</p>
+                        <div class="opt-grid" id="vehicle-grid"></div>
+
+                        <div class="field-label"><i class="ph-fill ph-info"></i> Surface condition</div>
+                        <div class="chip-row" id="condition-row"></div>
+                    </section>
+
+                    <!-- STEP 2 — Package -->
+                    <section class="step-pane" data-step="2">
+                        <h4 class="step-title">Choose your package</h4>
+                        <p class="step-sub">Every package includes the touchless pre-soak and spot-free rinse.</p>
+                        <div class="opt-grid" id="package-grid"></div>
+                    </section>
+
+                    <!-- STEP 3 — Add-ons -->
+                    <section class="step-pane" data-step="3">
+                        <h4 class="step-title">Add a finishing touch</h4>
+                        <p class="step-sub">Optional — skip this and you're still getting a very clean car.</p>
+                        <div class="addon-list" id="addon-list"></div>
+                    </section>
+
+                    <!-- STEP 4 — Slot -->
+                    <section class="step-pane" data-step="4">
+                        <h4 class="step-title">Pick your slot</h4>
+                        <p class="step-sub">Live availability across our three sites.</p>
+
+                        <div class="field-label"><i class="ph-fill ph-map-pin"></i> Location</div>
+                        <div class="chip-row" id="location-row"></div>
+
+                        <div class="field-label"><i class="ph-fill ph-calendar-blank"></i> Date</div>
+                        <div class="chip-row" id="date-row"></div>
+
+                        <div class="field-label"><i class="ph-fill ph-clock"></i> Time</div>
+                        <div class="chip-row" id="time-row"></div>
+                    </section>
+
+                    <!-- STEP 5 — Details -->
+                    <section class="step-pane" data-step="5">
+                        <h4 class="step-title">Where do we send the confirmation?</h4>
+                        <p class="step-sub">Demo only — no data leaves your browser.</p>
+
+                        <div class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bk-name">Full name</label>
+                                    <input type="text" id="bk-name" placeholder="Jordan Doe" autocomplete="name">
+                                    <span class="error-msg">Please enter your name</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bk-phone">Phone</label>
+                                    <input type="tel" id="bk-phone" placeholder="5551234567" autocomplete="tel">
+                                    <span class="error-msg">Enter a valid 10-digit phone number</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bk-email">Email</label>
+                                    <input type="email" id="bk-email" placeholder="you@email.com" autocomplete="email">
+                                    <span class="error-msg">Enter a valid email address</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bk-plate">Licence plate <span style="color:var(--clr-text-muted);font-weight:500;">(optional)</span></label>
+                                    <input type="text" id="bk-plate" placeholder="MRW 1234" style="text-transform:uppercase;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bk-notes">Notes for the team <span style="color:var(--clr-text-muted);font-weight:500;">(optional)</span></label>
+                                <textarea id="bk-notes" placeholder="Ceramic coated — please use the pH-neutral sealant only."></textarea>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- STEP 6 — Confirmation -->
+                    <section class="step-pane" data-step="6">
+                        <div class="confirm">
+                            <div class="confirm-check"><i class="ph-bold ph-check"></i></div>
+                            <h3>Bay reserved.</h3>
+                            <p>We've held your slot. Show this reference at the gate.</p>
+                            <div class="confirm-ref"><i class="ph ph-ticket"></i> <span id="confirm-ref">MW-000000</span></div>
+                            <div class="confirm-card" id="confirm-card"></div>
+                            <p style="margin-top:1.5rem;font-size:var(--fs-xs);">
+                                <i class="ph ph-info"></i> This is a demonstration booking. Nothing was charged and no data was transmitted.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Live summary -->
+                <aside class="modal-aside" id="modal-aside">
+                    <div class="summary-title">Your booking</div>
+                    <div class="media summary-car" id="summary-media">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="" onerror="this.remove()">
+                    </div>
+                    <div class="summary-lines" id="summary-lines"></div>
+                    <div class="summary-div"></div>
+                    <div class="summary-total">
+                        <span class="lbl">Total due at bay</span>
+                        <span class="amt" id="summary-total">$0</span>
+                    </div>
+                    <div class="summary-foot">
+                        <i class="ph-fill ph-info"></i>
+                        <span>Estimated time <b id="summary-duration">—</b>. Free cancellation up to 1 hour before your slot.</span>
+                    </div>
+                </aside>
+            </div>
+
+            <footer class="modal-foot">
+                <button class="btn btn-outline" id="bk-back"><i class="ph-bold ph-arrow-left"></i> Back</button>
+                <span class="demo-flag"><i class="ph ph-flask"></i> Demo booking</span>
+                <span class="spacer"></span>
+                <button class="btn btn-primary" id="bk-next">Continue <i class="ph-bold ph-arrow-right"></i></button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"><i class="ph-fill ph-check-circle"></i><span id="toast-text"></span></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

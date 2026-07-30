@@ -1,0 +1,74 @@
+/* ==========================================================================
+   MR.WASH IT — RTL overrides
+   Enabled by the navbar toggle (adds dir="rtl" and un-disables this sheet).
+   ========================================================================== */
+
+body { direction: rtl; text-align: right; }
+
+/* --- Navbar / drawer ----------------------------------------------------- */
+.drawer { right: auto; left: 0; border-left: none; border-right: 1px solid var(--clr-border); transform: translateX(-105%); }
+.drawer.open { transform: translateX(0); }
+.drawer-link:hover { padding-left: .75rem; padding-right: 1.1rem; }
+.drawer-link i { transform: scaleX(-1); }
+
+/* --- Hero ---------------------------------------------------------------- */
+.hero-overlay {
+    background:
+        radial-gradient(1000px 600px at 88% 30%, rgba(0, 180, 216, .32), transparent 60%),
+        linear-gradient(260deg, rgba(2, 12, 20, .96) 0%, rgba(2, 12, 20, .82) 38%, rgba(2, 12, 20, .35) 75%, rgba(2, 12, 20, .6) 100%);
+}
+.float-card.fc-1 { left: auto; right: -8%; }
+.float-card.fc-2 { right: auto; left: -6%; }
+
+/* Quick-book inputs */
+.input-group > i { left: auto; right: 1rem; }
+.input-group select,
+.input-group input { padding: .9rem 2.85rem .9rem 2.4rem; }
+.input-group::after { right: auto; left: 1.1rem; }
+
+/* --- Marquee ------------------------------------------------------------- */
+.marquee { animation-direction: reverse; }
+
+/* --- Content blocks ------------------------------------------------------ */
+.section-lead[style*="text-align:left"],
+.washbay-copy .section-lead { text-align: right !important; }
+
+.badge-float { left: auto; right: -22px; }
+.check-list li { text-align: right; }
+.feature-list li { text-align: right; }
+
+/* --- Wash bay ------------------------------------------------------------ */
+.bay-chrome { direction: ltr; }
+.bay-tag { align-self: flex-end; }
+.progress-fill { margin-left: auto; }
+
+/* --- Pricing ------------------------------------------------------------- */
+.pricing-media .price-tag { left: auto; right: 1rem; }
+.badge-popular { right: auto; left: 1rem; }
+.step-card .ghost-num { right: auto; left: 6px; }
+
+/* --- Gallery / before-after ---------------------------------------------- */
+.gallery-item .cap { left: auto; right: 1rem; }
+.ba-label.left { left: auto; right: 1.1rem; }
+.ba-label.right { right: auto; left: 1.1rem; }
+
+/* --- FAQ / forms --------------------------------------------------------- */
+.faq-question { text-align: right; }
+.form-group label { text-align: right; }
+
+/* --- Booking modal ------------------------------------------------------- */
+.modal-aside { border-left: none; border-right: 1px solid var(--clr-border); }
+.opt-icon { padding: 1.1rem .9rem 0 0; }
+.opt .opt-check { right: auto; left: .6rem; }
+.addon:hover { transform: translateX(-3px); }
+.modal-foot .btn i.ph-arrow-right,
+.modal-foot .btn i.ph-arrow-left { transform: scaleX(-1); }
+
+/* --- Footer / misc ------------------------------------------------------- */
+.footer-links a:hover { padding-left: 0; padding-right: 5px; }
+.to-top { right: auto; left: 1.25rem; }
+.lightbox-close { right: auto; left: 1.5rem; }
+
+@media (max-width: 1100px) {
+    .modal-aside { border-right: none; border-top: 1px solid var(--clr-border); }
+}
