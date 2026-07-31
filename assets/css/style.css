@@ -837,7 +837,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; colo
 .gallery-item { border-radius: var(--radius); overflow: hidden; position: relative; cursor: zoom-in; box-shadow: var(--shadow-sm); }
 .gallery-item.tall { grid-row: span 2; }
 .gallery-item.wide { grid-column: span 2; }
-.gallery-item.full { grid-column: 1 / -1; }
+.gallery-item.full { grid-column: 1 / -1; grid-row: span 2; }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease-out); }
 .gallery-item::after {
     content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity .35s;
