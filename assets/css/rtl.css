@@ -45,7 +45,7 @@ body { direction: rtl; text-align: right; }
 /* --- Pricing ------------------------------------------------------------- */
 .pricing-media .price-tag { left: auto; right: 1rem; }
 .badge-popular { right: auto; left: 1rem; }
-.step-card .ghost-num { right: auto; left: 6px; }
+.step-card .ghost-num { right: auto; left: 18px; }
 
 /* --- Gallery / before-after ---------------------------------------------- */
 .gallery-item .cap { left: auto; right: 1rem; }

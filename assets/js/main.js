@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const TOOLS = {
             sponge: { radius: 40, icon: 'ph-fill ph-hand-soap', label: 'Foam sponge', flow: 0.05, suds: 3, shape: 'round' },
             jet:    { radius: 24, icon: 'ph-fill ph-drop-half', label: 'Pressure jet', flow: 0.11, suds: 5, shape: 'jet' },
-            mop:    { radius: 62, icon: 'ph-fill ph-broom',     label: 'Wide mop',    flow: 0.03, suds: 2, shape: 'wide' }
+            mop:    { radius: 62, icon: 'ph-fill ph-broom',     label: 'Wide mop',    flow: 0.03, suds: 2, shape: 'wide' },
+            brush:  { radius: 32, icon: 'ph-fill ph-paint-brush', label: 'Scrub brush', flow: 0.06, suds: 4, shape: 'round' }
         };
 
         // Coverage grid — cheap, reliable progress tracking (no getImageData)
